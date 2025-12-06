@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Final Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/FalconePS.jpg">
+    
+<!--  ОТПРАВКА ФОРМЫ -->
+    <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"
+        onload="emailjs.init('5zsdEm0x2yFDFmY5d'); console.log('EmailJS initialized via onload');">
+</script>
+<script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Something about Ksenia</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#projects">My Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+          <li><a href="#game">Let game!</a></li>
+          <li><a href="#shopping">Let shop!</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section id="about">
+        <h2>About me</h2>
+        <p>
+          I was born in Russia. I graduated from university with a degree in
+          Economics and Management. I worked in advertising, printing, and a
+          press office. Later, I started my own ceramics production studio,
+          where I created and released art. I could have been an actress or a TV
+          host. I could have designed clothing collections, become a
+          photographer, or a blogger creating digital content. I could have even
+          become a system administrator, given my natural tendency to organize
+          and optimize computer processes. But I chose to move to the best
+          country, and in 2023 I enrolled at Arizona State University. In 2026,
+          I’ll be graduating with a Bachelor of Science in Graphic Information
+          Technology (Full Stack Development). My major allows me to combine all
+          my creative, technical, and organizational skills. What could be
+          better? I live in the sunny state of Florida. I have a husband, an
+          adult son, two cats, and a dog. I also grow roses and keep a small
+          garden among the palm trees.
+        </p>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+
+        <!-- Perfume -->
+        <div id="perfume_projects">
+            
+          <h2>Perfume projects</h2>
+          <p>
+            Shooting perfume ads for glossy magazines is one of my central
+            hobbies.
+          </p>
+
+            <div class="perfume-grid">
+                <div class="perfume-item">
+                    <h3>Kenzo Jungle</h3>
+                    <img src="images/Kenzo.jpg" alt="Фотография парфюма Kenzo" />
+                </div>
+
+                <div class="perfume-item">
+                    <h3>Molinard Mediterranee</h3>
+                    <img src="images/Molinard.jpg" alt="Фотография парфюма Molinard" />
+                </div>
+
+                <div class="perfume-item">
+                    <h3>Fragonard Fleur de Oranger</h3>
+                    <img src="images/Fragonard.jpg" alt="Фотография парфюма Fragonard" />
+                </div>
+
+                <div class="perfume-item">
+                    <h3>Lancome Oud Bouquet</h3>
+                    <img
+                        src="images/OudBouquet.jpg"
+                        alt="Фотография парфюма Oud Bouquet"
+                    />
+                </div>
+
+                <div class="perfume-item">
+                    <h3>Genium Painter</h3>
+                    <img src="images/Painter.jpg" alt="Фотография парфюма Painter" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo -->
+        <div id="photo_projects">
+          <h2>Photo projects</h2>
+          <p>Pictures of Florida Vibe</p>
+          <div class="picture-item">
+          <img src="images/Чайка.JPG" alt="Florida Vibe Seagull" width="400" height="280" />
+
+          <img src="images/Волна.JPG" alt="Florida Vibe Wave" width="400" height="280"/>
+
+          <img src="images/Море.JPG" alt="Florida Vibe Ocean" width="400" height="280"/>
+
+          <img src="images/Ромашки.JPG" alt="Florida Vibe Chamomile" width="400" height="280"/>
+
+          <img src="images/Ноги.JPG" alt="Florida Vibe Me" width="400" height="280"/>
+
+          <img src="images/Еще_чайка.JPG" alt="Florida Vibe Seagull again" width="400" height="280"/>
+
+          <img src="images/РомашкибольшиеПортрет.JPG" alt="Florida Vibe Chamomile Big Portrait" width="400" height="280"/>
+
+          <img src="images/Беседка.jpeg" alt="Florida Coast Life Pergola" width="400" height="280"/>
+
+          <img src="images/Вид_на_море.jpeg" alt="Florida Coast Life Ocean View" width="400" height="280"/>
+        </div>
+        </div>
+
+        <!-- Video -->
+        <div id="video_projects">
+          <h2>Video projects</h2>
+
+        <div class="video">
+         <h3>Mediterranee Molinard</h3>
+        <video  controls>
+        <source src="images/PROJECT_1.mp4" type="video/mp4" 
+        title="Mediterranee Molinard">
+        </video>
+
+
+          <h3>Real Estate projects</h3> 
+         <div><iframe src="https://player.vimeo.com/video/1142738666?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Real estate group"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        </div>
+
+        <!-- Art -->
+        <div id="arts">
+          <h2>Art projects</h2>
+          
+        <div class="art-row">
+            <div class="art_creation1">
+                <h3>Poppies</h3>
+                <p>“Poppies” project for a permanent makeup studio in Sarasota - design concept and execution.</p>
+                <img src="images/Маки.jpg" alt="“Poppies” project" width="400" height="340">
+            </div>
+
+            <div class="art_creation2">
+                <h3>Gateway Marina</h3>
+                <p>Artwork for the office of Gateway Marina. Comprehensive project for a boat dock.</p>
+                <img src="images/Картина_Гетэвэй.jpg" alt="Artwork Gateway Marina." width="400" height="340">
+            </div>
+
+            <div class="art_creation3">
+                <h3>Cruise boat</h3>
+                <p>Design project and realization - artistic painting of a cruise boat at Gateway Marina.</p>
+                <img src="images/Пеликан.jpg" alt="Painting of a cruise boat" width="400" height="340">
+            </div>
+        </div>
+        </div>
+      </section>
+
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <form id="contactForm">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName">
+          <div class="error" id="nameError"></div>
+
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" name="phone">
+          <div class="error" id="phoneError"></div>
+
+          <label for="email">Email Address:</label>
+          <input type="text" id="email" name="email">
+          <div class="error" id="emailError"></div>
+
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments"></textarea>
+          <div class="error" id="commentsError"></div>
+
+          <p>Preferred Contact Method:</p>
+          <label><input type="radio" name="contactMethod" value="phone"> Contact by Phone</label>
+          <label><input type="radio" name="contactMethod" value="email"> Contact by Email</label>
+          <div class="error" id="methodError"></div>
+
+          <input type="submit" value="Submit">
+          </form>
+          <div id="successMessage" class="success"></div>
+          </section>
+
+        <section id="game">
+            <h2>Game</h2>
+            <p>Click the button to generate two random numbers. If both numbers are ones, you win! If you didn’t win, keep pressing this button. In the end you’ll succeed. I believe in you, you can do it. Just don’t stop pressing, only three semesters left!!</p>
+            <span id="random1"></span>
+            <span id="random2"></span>
+            <p id="gameMsg"></p>
+            <button id="gamePlay">Play!</button>
+	      </section>
+      
+        <section id="shopping">
+          <h2>Shopping</h2>
+          <p>Please choose the option</p>
+           <form id="products">
+			<fieldset>
+      <legend>Choose the product: <span class="required">*</span></legend>
+
+        <div class="samples">
+            <label for="perfumeProjects" class="radio">
+                <img src="images/SmallPicture.jpg" alt="Picture with perfume in waves" width="100" height="100" class="radio-image">
+                <span class="radio_input">
+                <input type="radio" name="creation" id="perfumeProjects" required checked>
+                <span class="radio_control"></span>
+                </span>     
+                <span class="radio_label">Perfume</span>
+            </label>
+                
+            <label for="photoProjects" class="radio">
+                <img src="images/Sunset.jpg" alt="Sunset in Venice" width="100" height="100" class="radio-image">
+                <span class="radio_input">
+                <input type="radio" name="creation" id="photoProjects" required>
+                <span class="radio_control"></span>
+                </span>      
+                <span class="radio_label">Photo</span>
+            </label>
+                
+            <label for="videoProjects" class="radio">
+                <img src="images/Bouqet_purple.jpg" alt="Bouquet of purple flowers" width="100" height="100" class="radio-image">
+                <span class="radio_input">
+                <input type="radio" name="creation" id="videoProjects" required>
+                <span class="radio_control"></span>
+                </span>        
+                <span class="radio_label">Video</span>
+            </label>
+                
+            <label for="artProjects" class="radio">
+                    <img src="images/Artproject_flowers.jpg" alt="Corel pions picture" width="100" height="100" class="radio-image">
+                <span class="radio_input">
+                <input type="radio" name="creation" id="artProjects" required>
+                <span class="radio_control"></span>
+                </span>        
+                <span class="radio_label">Art</span>
+            </label>
+        </div>
+           
+		</fieldset><span id="product"></span>
+			<input type="submit" id="productsSubmit">
+		</form>
+		<p id="confirm"></p>
+	</section>
+         
+    </main>
+
+  
+  
+    <!-- Footer -->
+    <footer>
+
+        <p>Email: <a href="mailto:dubrovskayaksu@gmail.com.com">dubrovskayaksu@gmail.com</a></p>
+        <p>Phone: <a href="tel:+12392145244">+1.239.214.5244</a></p>
+        <p>Instagram: <a href="
+        https://www.instagram.com/bmediak?igsh=MXg3cXl6Mnl5NGNzdg%3D%3D&utm_source=qr" target="_blank">@bmediak</a></p>
+      <p>&copy; 2025 Ksenia Dubrovskaya Portfolio</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,9 +1,9 @@
 :root {
-  --color-background: #5ea3c3;   
-  --color-header: #133749;       
-  --color-text: #f7f8f9;         
-  --color-accent: #57be9f;       
-  --color-border: #99ccff;       
+  --color-background: #5ea3c3;
+  --color-header: #133749;
+  --color-text: #f7f8f9;
+  --color-accent: #57be9f;
+  --color-border: #99ccff;
 }
 
 body {
@@ -19,7 +19,7 @@ main {
   margin-right: 0.5in;
   padding: 20px;
   min-height: 100vh;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header {
@@ -46,7 +46,7 @@ nav a:hover {
 }
 
 header nav ul {
-  list-style: none; 
+  list-style: none;
 }
 
 h2 {
@@ -63,15 +63,17 @@ footer {
   margin-right: 0.5in;
 }
 
-#about{
+#about {
   max-width: 1280px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 /* PERFUME */
+
 #perfume_projects img {
-  border: 3px solid white; 
+  border: 3px solid white;
+  width: 80%;
 }
 
 #perfume_projects {
@@ -83,23 +85,54 @@ footer {
 .perfume-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;   
-  gap: 40px 30px;                   
+  gap: 20px 10px;                   
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 20px 20px;
 }
 
-/* ЛЕВАЯ КОЛОНКА  Kenzo, Fragonard, Painter */
-.perfume-item:nth-child(1) { grid-column: 1; grid-row: 1; }  /* Kenzo */
-.perfume-item:nth-child(3) { grid-column: 1; grid-row: 2; }  /* Fragonard */
-.perfume-item:nth-child(5) { grid-column: 1; grid-row: 3; }  /* Painter */
+.perfume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  align-items: start;
+}
 
+.perfume-item {
+  text-align: center;
+  width: 80%;
+}
 
-.perfume-item:nth-child(2) { grid-column: 2; grid-row: 1; }  
-.perfume-item:nth-child(4) { grid-column: 2; grid-row: 2; }  
+.perfume-item:nth-child(1) {
+  /* Kenzo */
+  grid-column: 1;
+  grid-row: 1;
+}
+.perfume-item:nth-child(3) {
+  /* Fragonard */
+  grid-column: 1;
+  grid-row: 2;
+}
+.perfume-item:nth-child(5) {
+  /* Painter */
+  grid-column: 1;
+  grid-row: 3;
+  margin-top: -310px;
+}
+
+.perfume-item:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.perfume-item:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
 
 .perfume-item h3 {
   margin: 0;
+  padding-bottom: 5px;
 }
 
 .perfume-item img {
@@ -116,97 +149,94 @@ footer {
 
 .picture-item {
   display: grid;
-  justify-content: center;     
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px 30px;            
+  gap: 30px 30px;
   max-width: 1280px;
   margin: 0 auto;
   padding: 20px 20px;
 }
 
-
 /* VIDEO */
 #video_projects {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .video {
-    display: flex;
-    flex-direction: column;
-    align-items: center;       
-    gap: 0px;                 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
 }
 
 .video video,
 .video > div {
-    width: 90%;
-    max-width: 1000px;        
+  width: 90%;
+  max-width: 1000px;
 }
 
 .video > div {
-    position: relative;
-    padding-bottom: 56.25%;     /* 16:9 */
-    height: 0; 
-    overflow: hidden;   
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
 }
 
 .video > div iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* ARTS */
 
-#arts{
+#arts {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 20px;  
+  padding: 40px 20px;
 }
 
 #arts img {
-  border: 3px solid white; 
+  border: 3px solid white;
 }
 
-#arts p{
+#arts p {
   width: 400px;
 }
 
 .art-row {
   display: flex;
-  justify-content: space-between; 
-  gap: 20px; 
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .art-row div {
-  text-align: center;  
-  flex: 1; 
-} 
+  text-align: center;
+  flex: 1;
+}
 
 /* CONTACT ME */
-#contact{
+#contact {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 20px; 
-
+  padding: 40px 20px;
 }
 
 form {
-  max-width: 500px;  
+  max-width: 500px;
   display: flex;
   flex-direction: column;
-  
 }
 
 input[type="text"],
 textarea {
   border-radius: 5px;
-  padding: 8px;   
+  padding: 8px;
 }
 
 .error {
@@ -222,45 +252,41 @@ textarea {
 }
 
 /* GAME */
-#game{
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px 20px; 
-
-}
-
-/* SHOPPING */
-#shopping{
+#game {
   max-width: 1280px;
   margin: 0 auto;
   padding: 40px 20px;
- 
+}
+
+/* SHOPPING */
+#shopping {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 #shopping img {
-  border: 3px solid white; 
+  border: 3px solid white;
 }
 
 .samples {
-  display: flex;            
-  gap: 5px;                  
-  justify-content: center;    
-  flex-wrap: wrap; 
-  width: 100%;           
-  max-width: 800px; 
-          
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
 }
 
 .samples .radio {
   display: flex;
-  flex-direction: column;      
-  align-items: center;        
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
 }
 
-
-
-button, input[type="submit"]{
+button,
+input[type="submit"] {
   display: block;
   margin: 1rem auto;
   background-color: #113d32;
@@ -273,15 +299,4 @@ button, input[type="submit"]{
   box-shadow: -6px 6px 10px var(--med-gray);
   height: auto;
   border-radius: 10px;
-  
 }
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,5 @@
 
+"use strict";
 // CONTACT ME
 function valOnSubmit(e){
   // Prevent default form submission

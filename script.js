@@ -1,4 +1,25 @@
 "use strict";
+
+const themeSwitch = document.getElementById("themeSwitch");
+
+// Checking
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  themeSwitch.checked = true;
+}
+
+// Switching with click
+themeSwitch.addEventListener("change", function () {
+  if (this.checked) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("theme", "light");
+  }
+});
+
+
 // CONTACT ME
 function valOnSubmit(e) {
   // Prevent default form submission
@@ -143,35 +164,52 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // GAME
-// We need to generate random numbers, or the game won’t work.
+// We need to generate random numbers for the second number, or the game won’t work.
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function gameProject() {
-  //Two spans where we'll display the numbers, and the one for the message
-  let dieDisplay1 = document.getElementById("random1");
-  let dieDisplay2 = document.getElementById("random2");
+function playGuessingGame(e) {
+  e.preventDefault();
+  // For output
+  let userGuessDisplay = document.getElementById("userGuess");
+  let randomNumberDisplay = document.getElementById("randomNumber");
   let gameMessage = document.getElementById("gameMsg");
 
-  //generate two random numbers between 1 and six (like rolling dice)
-  let die1 = getRandomNumber(1, 6);
-  let die2 = getRandomNumber(1, 6);
+  //What the user entered
+  let guessInput = document.getElementById("guessInput").value;
+  let userGuess = parseInt(guessInput);
 
-  //display those numbers to the screen
-  dieDisplay1.innerHTML = die1;
-  dieDisplay2.innerHTML = die2;
+  // Checking of user's number
+  if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+    gameMessage.innerHTML = "Please enter a number between 1 and 10!";
+    userGuessDisplay.innerHTML = "";
+    randomNumberDisplay.innerHTML = "";
+    return;
+  }
 
-  //see if they match, then display winning message
-  if (die1 === 1 && die2 === 1) {
-    gameMessage.innerHTML = "The numbers matched! You Win!";
+  // Now we generate a random second number from 1 to 10
+  let randomNum = getRandomNumber(1, 10);
+
+  // Both of numbers
+  userGuessDisplay.innerHTML = "Your turn: " + userGuess;
+  randomNumberDisplay.innerHTML = "Random number: " + randomNum;
+
+  // Checking the match
+  if (userGuess === randomNum) {
+    gameMessage.innerHTML = "Congratulations! You win!";
   } else {
-    gameMessage.innerHTML =
-      "Sorry, the numbers didn't match. Don't give up! Try Again and you'll do sooner or later this project!!!";
+    gameMessage.innerHTML = "You guessed wrong. Try again!";
   }
 }
-//for the game, important - We connect the button to the code so that the numbers start running.
-document.getElementById("gamePlay").addEventListener("click", gameProject);
+
+// Button
+document
+  .getElementById("gameForm")
+  .addEventListener("submit", playGuessingGame);
+
+
+
 
 // SHOPPING
 // first, let's create some global variables to track validity of the inputs in the form
@@ -191,19 +229,24 @@ let productsSpan = document.getElementById("product");
 function displayProducts() {
   //determine which radio is selected and display the correct product in the span based on the choice
   if (perfumeProjects.checked) {
-    productsSpan.textContent = "You have chosen: Perfume Project";
+    productsSpan.innerHTML =
+      'You have chosen: Perfume Project <br><img src="images/SmallPicture.jpg" alt="Picture with perfume in waves" width="100" height="100">';
     productIsValid = perfumeProjects.checked;
   }
   if (photoProjects.checked) {
-    productsSpan.textContent = "You have chosen: Photo Project";
+    productsSpan.innerHTML =
+      'You have chosen: Photo Project <br><img src="images/Sunset.jpg" alt="Sunset in Venice" width="100" height="100">';
+
     productIsValid = photoProjects.checked;
   }
   if (videoProjects.checked) {
-    productsSpan.textContent = "You have chosen: Video Project";
+    productsSpan.innerHTML =
+      'You have chosen: Video Project <br><img src="images/Bouquet_purple.jpg" alt="Bouquet of purple flowers" width="100" height="100">';
     productIsValid = videoProjects.checked;
   }
   if (artProjects.checked) {
-    productsSpan.textContent = "You have chosen: Art Project";
+    productsSpan.innerHTML =
+      'You have chosen: Art Project <br><img src="images/Artproject_flowers.jpg" alt="Corаl pions picture" width="100" height="100">';
     productIsValid = artProjects.checked;
   }
 }

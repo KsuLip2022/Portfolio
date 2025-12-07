@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="images/FalconePS.jpg" />
 
-    <!--  ОТПРАВКА ФОРМЫ -->
+    <!--  SEND FORM emailjs-->
     <script
       src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"
       onload="emailjs.init('5zsdEm0x2yFDFmY5d'); console.log('EmailJS initialized via onload');"
@@ -22,10 +22,16 @@
           <li><a href="#about">About me</a></li>
           <li><a href="#projects">My Projects</a></li>
           <li><a href="#contact">Contact Me</a></li>
-          <li><a href="#game">Let game!</a></li>
-          <li><a href="#shopping">Let shop!</a></li>
+          <li><a href="#game">Let's play!</a></li>
+          <li><a href="#shopping">Let's shop!</a></li>
         </ul>
       </nav>
+      <div id="themeChange">
+        <label class="mode-toggle">
+          <input type="checkbox" id="themeSwitch" />
+          <span>Light / Dark</span>
+        </label>
+      </div>
     </header>
 
     <!-- MAIN -->
@@ -33,21 +39,23 @@
       <section id="about">
         <h2>About me</h2>
         <p>
-          I was born in Russia. I graduated from university with a degree in
-          Economics and Management. I worked in advertising, printing, and a
-          press office. Later, I started my own ceramics production studio,
-          where I created and released art. I could have been an actress or a TV
-          host. I could have designed clothing collections, become a
-          photographer, or a blogger creating digital content. I could have even
-          become a system administrator, given my natural tendency to organize
-          and optimize computer processes. But I chose to move to the best
-          country, and in 2023 I enrolled at Arizona State University. In 2026,
-          I’ll be graduating with a Bachelor of Science in Graphic Information
-          Technology (Full Stack Development). My major allows me to combine all
-          my creative, technical, and organizational skills. What could be
-          better? I live in the sunny state of Florida. I have a husband, an
-          adult son, two cats, and a dog. I also grow roses and keep a small
-          garden among the palm trees.
+          I was born in Russia and earned my university degree in Economics and
+          Management. My career path has been diverse: I worked in advertising,
+          printing, and a press office before launching my own ceramics studio,
+          where I created and released original art. Along the way, I considered
+          many possibilities - I might have become an actress or TV host,
+          designed clothing collections, pursued photography, or built a career
+          as a digital content creator. With my natural inclination to organize
+          and optimize computer processes, even system administration could have
+          been an option. Ultimately, I chose a different journey. In 2018, I
+          moved to the United States and enrolled at Arizona State University.
+          By 2026, I will graduate with a Bachelor of Science in Graphic
+          Information Technology (Full Stack Development). This major allows me
+          to unite my creative, technical, and organizational strengths into one
+          cohesive discipline - an ideal blend of everything I love. Today, I
+          live in sunny Florida with my husband, our adult son, two cats, and a
+          dog. Beyond my studies and projects, I enjoy cultivating roses and
+          tending a small garden nestled among the palm trees.
         </p>
       </section>
 
@@ -284,15 +292,25 @@
       <section id="game">
         <h2>Game</h2>
         <p>
-          Click the button to generate two random numbers. If both numbers are
-          ones, you win! If you didn’t win, keep pressing this button. In the
-          end you’ll succeed. I believe in you, you can do it. Just don’t stop
-          pressing, only three semesters left!!
+          Enter a number from 1 to 10 and click the button. If your number
+          matches the random one, you win!
         </p>
-        <span id="random1"></span>
-        <span id="random2"></span>
+        <form id="gameForm">
+          <label for="guessInput">Enter your number:</label>
+          <input
+            type="number"
+            id="guessInput"
+            name="guessInput"
+            min="1"
+            max="10"
+            required
+          />
+          <button type="submit">Let's play</button>
+        </form>
+
+        <p id="userGuess"></p>
+        <p id="randomNumber"></p>
         <p id="gameMsg"></p>
-        <button id="gamePlay">Play!</button>
       </section>
 
       <section id="shopping">
@@ -304,13 +322,13 @@
 
             <div class="samples">
               <label for="perfumeProjects" class="radio">
-                <img
+                <!-- <img
                   src="images/SmallPicture.jpg"
                   alt="Picture with perfume in waves"
                   width="100"
                   height="100"
                   class="radio-image"
-                />
+                /> -->
                 <span class="radio_input">
                   <input
                     type="radio"
@@ -325,13 +343,13 @@
               </label>
 
               <label for="photoProjects" class="radio">
-                <img
+                <!-- <img
                   src="images/Sunset.jpg"
                   alt="Sunset in Venice"
                   width="100"
                   height="100"
                   class="radio-image"
-                />
+                /> -->
                 <span class="radio_input">
                   <input
                     type="radio"
@@ -345,13 +363,13 @@
               </label>
 
               <label for="videoProjects" class="radio">
-                <img
+                <!-- <img
                   src="images/Bouqet_purple.jpg"
                   alt="Bouquet of purple flowers"
                   width="100"
                   height="100"
                   class="radio-image"
-                />
+                /> -->
                 <span class="radio_input">
                   <input
                     type="radio"
@@ -365,13 +383,13 @@
               </label>
 
               <label for="artProjects" class="radio">
-                <img
+                <!-- <img
                   src="images/Artproject_flowers.jpg"
                   alt="Corel pions picture"
                   width="100"
                   height="100"
                   class="radio-image"
-                />
+                /> -->
                 <span class="radio_input">
                   <input
                     type="radio"

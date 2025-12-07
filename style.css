@@ -11,8 +11,19 @@ body {
   padding: 0;
   background-color: white;
   font-family: Garamond, serif;
-  font-size: large;
+  font-size: larger;
+  transition: background-color 0.3s, color 0.3s;
+  color: var(--color-text);
 }
+
+body.dark-mode {
+  --color-background: #121212;
+  --color-header: #1e1e1e;
+  --color-text: #e0e0e0;
+  --color-accent: #57be9f;
+  --color-border: #333333;
+}
+
 main {
   background-color: var(--color-background);
   margin-left: 0.5in;
@@ -20,6 +31,12 @@ main {
   padding: 20px;
   min-height: 100vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#themeChange {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
 header {
@@ -256,6 +273,26 @@ textarea {
   max-width: 1280px;
   margin: 0 auto;
   padding: 40px 20px;
+}
+
+#game form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center; 
+  padding: 20px; 
+  text-align: center;  
+}
+
+#guessInput {
+  width: 200px;         
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  border: 2px solid #555;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 /* SHOPPING */
